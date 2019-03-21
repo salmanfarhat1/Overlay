@@ -30,13 +30,47 @@ public class UserAccount_impl implements UserAccount_itf{
         return this.ID;
     }
 
+    public ArrayList<Integer> getDistanceVector(int clientsNumber) throws RemoteException{
+       ArrayList<Integer> distances = new ArrayList<Integer>();
+        int exist = 0;
+
+      for(int i = 0 ; i < clientsNumber ; i++ )
+      {
+          for(int j = 0 ; j < relatedTo.size() ; j++ )
+          {
+              if(i == relatedTo.get(j)) {
+
+                  //distances.get(i).add(1); // int this version we suppose that it is unweighted
+                  exist = 1;
+
+              }
+          }
+          if(exist == 1){
+              exist = 0;
+              distances.add(1);
+          }
+          else
+              distances.add(0);
+
+      }
+
+        /*for(int i = 0;  i<distances.length ; i++ )
+            System.out.print("-" + distances[i]);
+        System.out.println("");*/
+        //System.out.println("size is "+clientsNumber);
+
+
+        return distances;
+    }
+
     public void addRelation(int hostID) throws RemoteException{
         this.relatedTo.add(hostID);
     }
+
     public void printMyRelations(){
         String S = "Related to : ";
         for(int i = 0 ; i < relatedTo.size() ; i++){
-            S = S + relatedTo.get(i);
+            S = S +"-"+relatedTo.get(i);
         }
         System.out.println(S);
     }

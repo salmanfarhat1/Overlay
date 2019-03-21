@@ -33,7 +33,7 @@ public class Clients {
             int destHostRelate;
             while(true)
             {
-                System.out.println("1- Show users list\n2- Relate Me\n3- My relations");
+                System.out.println("1- Show users list\n2- Relate Me\n3- My relations\n4- print path matrix");
                 choice = sc.nextInt();
                 if(choice == 1)
                 {
@@ -49,6 +49,9 @@ public class Clients {
                 else if(choice == 3)
                 {
                     UA.printMyRelations();
+                }
+                else  if(choice == 4){
+                    I.printPathMatrix();
                 }
                 else{
                     System.out.println("Choice is : "+choice);

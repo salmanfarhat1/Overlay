@@ -79,15 +79,15 @@ class GeneratePath {
     public static void main(String[] args)
     {
         int[][] adjacencyMatrix = {
-                { 0,1,0,0 },
-                { 1,0,1,0 },
                 { 0,1,0,1 },
-                { 0,0,1,0 }
+                { 1,0,1,0 },
+                { 0,1,0,0 },
+                { 1,0,0,0 }
         };
         // dijkstra(adjacencyMatrix, 1 , 3);
         System.out.println("HI HI HI HI HI");
         GeneratePath GP = new GeneratePath(4);
-        GP.dijkstra(adjacencyMatrix , 0 , 2);
+        GP.dijkstra(adjacencyMatrix , 3 , 2);
     }
 
 }

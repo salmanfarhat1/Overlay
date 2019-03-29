@@ -6,8 +6,19 @@ import java.io.*;
 public class MainNode {
     public static void  main(String [] args) {
         try{
+//            for(int i =0  ; i  < args.length ;i++){
+//                if( i+1 != args.length)
+//                    TOPOLOGY += args[i]+"/";
+//                else
+//                    TOPOLOGY += args[i];
+//            }
+            //System.out.println(TOPOLOGY);
+//
+//            for(int i =0  ; i  < args.length ;i++){
+//                System.out.println(args[i]+"/");
+//            }
 
-            Initialize_impl I = new Initialize_impl();
+            Initialize_impl I = new Initialize_impl(args);
             Initialize_itf I_stub = (Initialize_itf) UnicastRemoteObject.exportObject(I, 0);
 
             Registry registry= LocateRegistry.getRegistry();

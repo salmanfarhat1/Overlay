@@ -6,8 +6,8 @@
 * ./runScript.sh
 * export CLASSPATH="lib/Initialize_itf.jar:lib/ServerReg_itf.jar:lib/VirtualTranslation_itf.jar"
 * rmiregistry &
-#4- ./mainNodeServer.sh
-#then open new terminal run as much as you want nodes using 
-#5- ./serversScript.sh
+* ./mainNodeServer.sh
+*then open new terminal run as much as you want nodes using 
+* ./serversScript.sh
 
-#don't forget to kill the rmiregistry before compiling agian  
+don't forget to kill the rmiregistry before compiling agian  
